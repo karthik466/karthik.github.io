@@ -1,0 +1,30 @@
+<html>
+<body bgcolor="#55FFEE">
+<H1 style="color:green">Welcome to PWA App Demo</H1>
+
+<input id="inputField" name="input_data" maxlength="50"
+       style="height:50px;width:300px;font-size:20pt;" type="text" align="center"/>
+<br/>
+<br/>
+<br/>
+
+
+<button id="submit" style="height:50px;width:200px" onclick="sendMessage()">Send data to Android
+</button>
+
+<script type="text/javascript">
+     function sendMessage() {
+      var valueReceived =  document.getElementById("inputField").value;
+      //alert(valueReceived);
+      DataBridge.showNativeMessage(valueReceived);
+      }
+
+ function updateFromNative(message){
+		document.getElementById("inputField").value = message;
+    }
+
+
+</script>
+</body>
+
+</html>
