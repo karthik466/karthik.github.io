@@ -1,2 +1,0 @@
-# karthik.github.io
-Testing
